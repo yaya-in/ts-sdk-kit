@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "target": "es5",
+    "allowJs": true,
+    // 移除代码注解
+    "removeComments": true,
+    // 自动生成声明文件
+    "declaration": true,
+    // 指定生成的声明文件的存放目录
+    "declarationDir": "./lib/types",
+    // 允许export=导出，由import from 导入
+    "esModuleInterop": true,
+    // 模块解析策略
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

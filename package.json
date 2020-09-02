@@ -1,0 +1,97 @@
+{
+  "name": "@template/ts",
+  "version": "0.10.1-alpha",
+  "repository": {
+    "type": "git",
+    "url": "https://git.wokoworks.com:4430/tinalim/fx-sdk"
+  },
+  "description": "",
+  "main": "./index.js",
+  "module": "./index.es.js",
+  "types": "./lib/types/main.d.ts",
+  "scripts": {
+    "test": "jest --no-cache",
+    "test:cov": "jest --coverage",
+    "test:clear": "jest --clearCache",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "build:prod": "rm -rf ./dist/* &&  rollup -c ./build/rollup.config.prod.js --environment BUILD:production",
+    "build:dev": "rm -rf ./dist/* &&  rollup -c ./build/rollup.config.dev.js -w --environment BUILD:dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "doc": "./README.md",
+    "example": "./README.md"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-external-helpers": "^7.10.1",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.7.7",
+    "@rollup/plugin-babel": "^5.0.3",
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-json": "^4.0.1",
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "@rollup/plugin-typescript": "^2.0.1",
+    "@types/jest": "^24.0.25",
+    "@types/long": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "babel-jest": "^26.0.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "clean-jsdoc-theme": "^2.2.11",
+    "docdash": "^1.2.0",
+    "eslint": "^6.8.0",
+    "google-protobuf": "^3.12.2",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "minami": "^1.2.3",
+    "pbjs": "0.0.14",
+    "rollup-plugin-analyzer": "^3.2.3",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "^24.2.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bech32": "^1.1.3",
+    "bignumber.js": "^9.0.0",
+    "bip32": "^2.0.4",
+    "bip39": "^3.0.2",
+    "create-hash": "^1.2.0",
+    "eccrypto": "^1.1.3",
+    "elliptic": "^6.5.2",
+    "is_js": "^0.9.0",
+    "json-stable-stringify": "^1.0.1",
+    "long": "^4.0.0",
+    "ndjson": "^1.5.0",
+    "pumpify": "^2.0.1",
+    "rollup": "^2.11.2",
+    "tiny-secp256k1": "^1.1.3",
+    "tweetnacl": "^1.0.3",
+    "url": "^0.11.0",
+    "websocket-stream": "^5.5.0"
+  },
+  "publishConfig": {
+    "registry": "http://nexus-pw.pundix.com:8083/repository/npm-test/"
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  }
+}
